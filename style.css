@@ -1,0 +1,286 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+h1, h2{
+  color: white;
+}
+u{
+  color: white;
+}
+.QW{
+  margin-bottom: 20%;
+  margin-top: 15%;
+  color: black;
+}
+
+header {
+  background-color: #007BFF; /* Blue header background */
+  color: #fff; /* White header text color */
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Menu icon styles */
+.menu-icon {
+  display: block; /* Display the menu icon */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Horizontal navigation bar styles */
+nav {
+  background-color: #444;
+  text-align: right;
+  padding: 0.5rem 0;
+  position: relative; /* Add position relative for the menu icon positioning */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: flex-end;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav li a {
+  color: #fff; /* White navigation link color */
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav li a:hover {
+  background-color: #555;
+}
+
+/* Sky background */
+.sky-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Adjust the height as needed */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIqL3WqxFnEyf5oW_kpyUnYAQD5HEcXJpN5w&usqp=CAU"); /* Replace with your sky background image */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* Sidebar styles */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide the sidebar by default */
+  width: 250px;
+  height: 100%;
+  background-color: #0056b3; /* Dark blue sidebar background */
+  padding-top: 60px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the sidebar options */
+.sidebar li a {
+  color: #fff; /* White sidebar link color */
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li a:hover {
+  background-color: #004080; /* Darker blue on hover */
+}
+
+.sidebar a {
+  color: #fff; /* White sidebar link color */
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #004080; /* Darker blue on hover */
+}
+
+  .sidebar {
+    left: -250px; /* Hide the sidebar by default */
+    transition: left 0.3s ease;
+  }
+
+  body.sidebar-open .sidebar {
+    left: 0; /* Show the sidebar when it's open */
+  }
+
+  body.sidebar-open main {
+    margin-left: 250px; /* Adjust the main content area when the sidebar is open */
+  }
+
+/* Show the logo when the sidebar is open */
+body.sidebar-open nav {
+  display: none;
+}
+
+body.sidebar-open .sidebar .logo {
+  display: block;
+}
+
+main {
+  text-align: center;
+  padding: 2rem 0;
+  flex: 1 0 auto; /* Let main take up remaining vertical space */
+}
+}
+
+.ad-container {
+  margin-top: 20px;
+}
+
+#message{
+  border: solid black 2px;
+  padding: 20px;
+}
+
+section form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+section form input[type="email"],[type="txt"],[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #007BFF; /* Blue border for email input */
+  border-radius: 5px 0 0 5px;
+  width: 250px;
+}
+
+#submit{
+   padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+#submit:hover{
+   background-color: #0056b3;
+}
+
+.contact{
+  padding: 20px;
+}
+.content{
+  padding: 20px;
+   background-color: white;
+  border: solid black 2px;
+  border-radius: 3px;
+}
+.content h2{
+  color: #007BFF;
+}
+.content :hover{
+  background-color: white;
+  border: solid black 2px;
+  border-radius: 3px;
+}
+.cnt1{
+  color: white;
+  padding: 20px;
+}
+.note{
+  color: red;
+}
+
+footer {
+  background-color: #007BFF; /* Blue footer background */
+  color: #fff; /* White footer text color */
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+/* Responsive styles */
+@media only screen {
+  /* Adjust styles for all screen sizes */
+  header h1 {
+    margin-left: 50px; /* Add some space for the menu icon */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon */
+  }
+
+  nav {
+    text-align: center; /* Center the navigation on smaller screens */
+  }
+
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .sidebar {
+    left: -250px;
+    transition: left 0.3s ease;
+  }
+
+  body.sidebar-open .sidebar {
+    left: 0;
+  }
+
+  body.sidebar-open main {
+    margin-left: 250px;
+  }
+
+  body.sidebar-open nav {
+    display: none;
+  }
+
+  body.sidebar-open .sidebar .logo {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 2000px) {
+  nav {
+    text-align: right; /* Align the navigation links to the right */
+    
+  }
+}
+/* Add more media queries as needed for larger screen sizes if you want to adjust the layout further */
