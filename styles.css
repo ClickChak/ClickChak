@@ -1,0 +1,116 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2b;
+    color: #ccc;
+}
+
+header {
+    background-color: #333;
+    color: #00cc99;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.horizontal-nav {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-nav li {
+    margin: 0 20px;
+}
+
+.horizontal-nav a {
+    text-decoration: none;
+    color: #00cc99;
+    transition: color 0.3s;
+}
+
+.horizontal-nav a:hover {
+    color: #00ffcc;
+}
+
+.vertical-nav {
+    background-color: #222;
+    color: #ccc;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    transition: left 0.3s;
+}
+
+.vertical-nav li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+.vertical-nav li.important {
+    background-color: #00cc99;
+}
+
+.vertical-nav a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.vertical-nav a:hover {
+    color: #00ffcc;
+}
+
+.vertical-nav.active {
+    left: 0;
+}
+
+.vertical-nav-toggle {
+    background-color: #444;
+    color: #00cc99;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.vertical-nav-toggle .toggle-icon::before {
+    content: '\2630';
+    font-size: 1.5em;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-post {
+    border-bottom: 1px solid #666;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #ccc;
+    padding: 10px;
+}
