@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const autoClickBtn = document.querySelector('.auto-click-btn');
-    const blankArea = document.querySelector('.blank-area');
+    const adsContainer = document.querySelector('.ads-container');
+    const adLinks = adsContainer.querySelectorAll('.ad-link');
 
     let autoClickEnabled = false;
+    let currentAdIndex = 0;
 
     autoClickBtn.addEventListener('click', function () {
         autoClickEnabled = !autoClickEnabled;
@@ -17,11 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function autoClick() {
         if (autoClickEnabled) {
-            const newTab = window.open('https://www.advertiser.com/popunder-ad', '_blank');
-            newTab.blur();
-            window.focus();
-            
-            setTimeout(autoClick, 3000); // Click every 3 seconds (adjust as needed)
+            if (currentAdIndex < adLinks.length) {
+                const adLink = adLinks[currentAdIndex];
+                adLink.click();
+                currentAdIndex++;
+                setTimeout(autoClick, 3000); // Click every 3 seconds (adjust as needed)
+            } else {
+                autoClickEnabled = false;
+                autoClickBtn.textContent = 'Enable Auto-Click';
+            }
         }
     }
 });
