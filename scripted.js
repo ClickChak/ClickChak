@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const autoClickBtn = document.querySelector('.auto-click-btn');
-    const adsContainer = document.querySelector('.ads-container');
-    const adLinks = adsContainer.querySelectorAll('.ad-link');
+    const adElements = document.querySelectorAll('.ad-element');
 
     let autoClickEnabled = false;
     let currentAdIndex = 0;
@@ -19,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function autoClick() {
         if (autoClickEnabled) {
-            if (currentAdIndex < adLinks.length) {
-                const adLink = adLinks[currentAdIndex];
-                adLink.click();
+            if (currentAdIndex < adElements.length) {
+                const adElement = adElements[currentAdIndex];
+                adElement.click();
                 currentAdIndex++;
                 setTimeout(autoClick, 3000); // Click every 3 seconds (adjust as needed)
             } else {
