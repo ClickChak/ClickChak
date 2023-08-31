@@ -7,7 +7,8 @@ const firebaseConfig = {
   projectId: "clickchak-9619f",
   storageBucket: "clickchak-9619f.appspot.com",
   messagingSenderId: "121601800230",
-  appId: "1:121601800230:web:449e15b2b4371094ca0ee7"
+  appId: "1:121601800230:web:449e15b2b4371094ca0ee7",
+    measurementId: "G-EJ8WRLKQS4"
 };
 
 const app = initializeApp(firebaseConfig);
