@@ -3,6 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDMZIjXOM6UBOAFXQMiFhyz1UXGSlmPj78",
+  authDomain: "clickchak-9619f.firebaseapp.com",
+  projectId: "clickchak-9619f",
+  storageBucket: "clickchak-9619f.appspot.com",
+  messagingSenderId: "121601800230",
+  appId: "1:121601800230:web:449e15b2b4371094ca0ee7",
+  measurementId: "G-EJ8WRLKQS4"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+  </script>
   <link rel="stylesheet" type="text/css" href="login.css">
     <title>Login - Blog.ClickChak</title>
 </head>
