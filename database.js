@@ -27,8 +27,8 @@ const dataRef = db.ref("userId"); // Replace with your data path
 
 // Data to be written
 const newData = {
-  key1: "value1",
-  key2: "value2",
+  key1: "manjul",
+  key2: "upreti",
   // Add more data as needed
 };
 
