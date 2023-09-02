@@ -9,6 +9,10 @@
       display: none;
       color: red;
     }
+    #success{
+      display: nono;
+      color: green;
+    }
   </style>
     <title>Login - Blog.ClickChak</title>
 </head>
@@ -17,6 +21,7 @@
     <div class="login-box">
       <h1>Blog.ClickChak</h1>
       <form id="login-form" onsubmit="login(event)">
+        <p id="success">Successfully Logged In</p>
         <p id="err">Email or Password is incorrect. Try again.</p>
         <input type="email" id="email" placeholder="Email" required>
         <input type="password" id="password" placeholder="Password" required>
