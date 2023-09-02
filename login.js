@@ -31,12 +31,7 @@ document.getElementById("login").addEventListener("click", function () {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Login successful
-    const successMessageElement = document.getElementById("success");
-
-    // Display the error message as a block element
-    successMessageElement.style.display = "block";
-      // You can access user information here if needed:
-      // const user = userCredential.user;
+   
     })
     .catch((error) => {
       // Handle login error
