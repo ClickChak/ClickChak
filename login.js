@@ -21,24 +21,22 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const auth = getAuth()
+// ... (Firebase initialization code)
 
-//Getting all the elements of html
-var email =document.getElementById("email");
-var password =document.getElementById("password");
+// Login function
+document.getElementById("login").addEventListener("click", function () {
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
 
-window.login = function (e) {
-  e.preventDefault();
-  var obj = {
-    email:email.value,
-    password:password.value
-  };
-  signInWithEmailAndPassword(auth, obj, email, obj, password)
-  .then(function(success){
-    console.log(user, uid)
-    alert("logged in successfully")
-  })
-  .catch(function(err){
-    alert("Error" + err)
-    }) 
- console.log(obj)
-}
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Login successful
+      alert("Login successful");
+      // You can access user information here if needed:
+      // const user = userCredential.user;
+    })
+    .catch((error) => {
+      // Handle login error
+      alert("Login failed. Error: " + error.message);
+    });
+});
