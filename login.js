@@ -37,6 +37,9 @@ document.getElementById("login").addEventListener("click", function () {
     })
     .catch((error) => {
       // Handle login error
-      document.getElementById("err").style.display = "block";
+     const errorMessageElement = document.getElementById("err");
+
+    // Display the error message as a block element
+    errorMessageElement.style.display = "block";
     });
 });
