@@ -21,15 +21,22 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
  
- function writeUserData(userId, name, email, password) {
-   const db = getDatabase();
-   const reference = ref(db, 'users/' + userId);
+// Reference to your database
+const db = firebase.database();
+const dataRef = db.ref("userId"); // Replace with your data path
 
-   set(reference, {
-    username: name,
-    email: email,
-    password: password
-   });
- }
+// Data to be written
+const newData = {
+  key1: "value1",
+  key2: "value2",
+  // Add more data as needed
+};
 
- writeUserData("manjul", "awu", "ecample@gmail.com", "qwerty");
+// Set the data in the specified path
+dataRef.set(newData)
+  .then(() => {
+    console.log("Data has been written successfully!");
+  })
+  .catch((error) => {
+    console.error("Error writing data: ", error);
+  });
