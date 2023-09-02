@@ -31,12 +31,12 @@ document.getElementById("login").addEventListener("click", function () {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Login successful
-      alert("Login successful");
+    
       // You can access user information here if needed:
       // const user = userCredential.user;
     })
     .catch((error) => {
       // Handle login error
-      alert("Login failed. Error: " + error.message);
+      document.getElementById("err").style.display = "block";
     });
 });
